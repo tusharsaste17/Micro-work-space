@@ -9,7 +9,7 @@ services:
         limits:
           memory: 900m
     networks:
-      - tusharbank
+      - tusharsastebank
   loans:
     image: "tusharsaste/loans:s4"
     container_name: loans-ms
@@ -20,7 +20,7 @@ services:
         limits:
           memory: 900m
     networks:
-      - tusharbank
+      - tusharsastebank
   cards:
     image: "tusharsaste/cards:s4"
     container_name: cards-ms
@@ -31,7 +31,7 @@ services:
         limits:
           memory: 900m
     networks:
-      - tusharbank
+      - tusharsastebank
 networks:
-  eazybank:
+  tusharsastebank:
     driver: "bridge"
