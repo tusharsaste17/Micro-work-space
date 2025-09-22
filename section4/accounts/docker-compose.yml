@@ -1,35 +1,26 @@
+version: "3.8"
 services:
   accounts:
-    image: "tusharsaste/accounts:s4"
-    container_name: accounts-ms
+    build: ./accounts
+    image: tusharsaste/accounts:s4
     ports:
       - "8080:8080"
-    deploy:
-      resources:
-        limits:
-          memory: 900m
     networks:
       - tusharsastebank
+
   loans:
-    image: "tusharsaste/loans:s4"
-    container_name: loans-ms
+    build: ./loans
+    image: tusharsaste/loans:s4
     ports:
       - "8090:8090"
-    deploy:
-      resources:
-        limits:
-          memory: 900m
     networks:
       - tusharsastebank
+
   cards:
-    image: "tusharsaste/cards:s4"
-    container_name: cards-ms
+    build: ./cards
+    image: tusharsaste/cards:s4
     ports:
       - "9000:9000"
-    deploy:
-      resources:
-        limits:
-          memory: 900m
     networks:
       - tusharsastebank
 networks:
