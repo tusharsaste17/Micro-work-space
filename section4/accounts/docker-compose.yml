@@ -7,7 +7,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 700m
+          memory: 900m
     networks:
       - tusharbank
   loans:
@@ -18,7 +18,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 700m
+          memory: 900m
     networks:
       - tusharbank
   cards:
@@ -29,7 +29,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 700m
+          memory: 900m
     networks:
       - tusharbank
 networks:
